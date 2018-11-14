@@ -1,6 +1,5 @@
 '''
-Module docstring here
-
+Contains functions for reading in tweets and processing their text.
 '''
 
 import re
@@ -28,9 +27,12 @@ def prcs_rw_twt(raw_tweet):
     tweet = raw_tweet.lower()
 
     # Build regular expressions for Twitter entities in text
-    retweet = re.compile(r'\srt\s') 
+    retweet = re.compile(r'\srt\s')
+    retweet_2 = re.compile(r'^rt\s')
     mention = re.compile(r'@[\w_]+') # alphanumeric and underscores
     link = re.compile(r'http[s]*:\/\/[^(t.co)]')
+    rt_link = re.compile(r'http[s]*:\/\/t.co')
+    link_2 = re.compile(r'http')
     emoji = re.compile(r'&#12\d+;') # example: &#128514;
     grammar = re.compile(r'&#\d+;') # example: &#8217; for apostrophe
     grammar2 = re.compile(r'&\w+;') # example: &amp; for &
@@ -39,7 +41,8 @@ def prcs_rw_twt(raw_tweet):
     wht_spc = re.compile(r'\s\s+') # remove excess whitespace
 
     to_search = [retweet, mention, link, emoji]
-    to_clean = to_search + [grammar2, alphanumeric, punctuation, wht_spc]
+    to_clean = to_search + [rt_link, grammar2, alphanumeric,
+        punctuation, wht_spc, link_2, retweet_2]
     new_features = []
 
     # Exctract new regex-based features

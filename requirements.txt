@@ -1,0 +1,39 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# To add to the main environment
+# $ conda install -c conda-forge --file requirements.txt
+# platform: osx-64
+asn1crypto=0.24.0=py36_0
+blinker=1.4=py_0
+ca-certificates=2018.4.16=0
+certifi=2018.4.16=py36_0
+cffi=1.11.5=py36_0
+chardet=3.0.4=py36_0
+cryptography=2.2.1=py36_0
+idna=2.6=py36_1
+libcxx=4.0.1=h579ed51_0
+libcxxabi=4.0.1=hebd6815_0
+libedit=3.1.20170329=hb402a30_2
+libffi=3.2.1=h475c297_4
+ncurses=6.1=h0a44026_0
+oauthlib=2.0.7=py_0
+openssl=1.0.2o=0
+pip=10.0.1=py36_0
+pycparser=2.18=py36_0
+pyjwt=1.6.1=py_0
+pymongo=3.6.1=py36_0
+pyopenssl=17.5.0=py36_1
+pysocks=1.6.8=py36_1
+python=3.6.5=hc167b69_1
+readline=7.0=hc1231fa_4
+requests=2.18.4=py36_1
+requests-oauthlib=0.8.0=py36_1
+setuptools=39.1.0=py36_0
+six=1.11.0=py36_1
+sqlite=3.23.1=hf1716c9_0
+tk=8.6.7=h35a86e2_3
+tweepy=3.5.0=py36_0
+urllib3=1.22=py36_0
+wheel=0.31.1=py36_0
+xz=5.2.3=h727817e_4
+zlib=1.2.11=hf3cbc9b_2
