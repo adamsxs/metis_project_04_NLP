@@ -5,6 +5,7 @@ Contains functions for reading in tweets and processing their text.
 import re
 import string
 import numpy as np
+#from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def prcs_rw_twt(raw_tweet):
     '''
